@@ -10,8 +10,15 @@
     <!--Exemplo de cenario: https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fimages%2Fpanorama-lab-360-degrees-laboratory-clean-room-where-experiments-are-conducted-on-human-blood-virtual-panorama-of-the-laboratory-complex-360-degree-overview-of-laboratory-equipment%2F247060215&psig=AOvVaw0XkPsP6_-WsIXYLI0ZwmSv&ust=1713266291847000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjF_7eMxIUDFQAAAAAdAAAAABAE-->
     <a-scene>
         <img id="laboratory" src="laboratory.jpeg">
-
         <a-sky id="image-360" radius="10" src="#laboratory"></a-sky>
+
+        <a-asset-item id="baloes" src="/chemistry_glassware/scene.gltf"></a-asset-item>
+        <a-entity gltf-model="#baloes" scale="0.15 0.15 0.15" rotation="0 110 0" position="-7.108 -3.396 -0.339"></a-entity>
+
+        <a-asset-item id="potion" src="/chemical_potion/scene.gltf"></a-asset-item>
+        <a-entity gltf-model="#potion" scale="0.15 0.15 0.15" rotation="0 110 0" position="1.309 -2.869 9.512"></a-entity>
+        
+        <a-entity gltf-model="#potion" scale="0.15 0.15 0.15" rotation="0 110 0" position="-0.240 -2.607 9.318"></a-entity>
     </a-scene>
 </body>
 </html>
