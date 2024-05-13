@@ -16,20 +16,49 @@
         <img id="laboratory" src="science-lab-360.webp">
         <a-sky id="image-360" radius="10" src="#laboratory"></a-sky>
 
-        <!-- baloons -->
-        <a-asset-item id="baloes" src="/chemistry_glassware/scene.gltf"></a-asset-item>
-        <a-entity gltf-model="#baloes" scale="0.15 0.15 0.15" rotation="0 125 0" position="-5 -4 2"></a-entity>
-        
-        <a-cylinder color="crimson" height="1.2" radius=".7" position="-5.692 -3.3 4.7"></a-cylinder>
+      
 
         <!-- START -->
         <a-entity text="value: START; color: red" rotation="0 125 0" position="-5 1.5 -1.4" scale="8 8 8" start-animation-on-click></a-entity>
         
-        <!-- bottle -->
-        <a-asset-item id="potion" src="/chemical_potion/scene.gltf"></a-asset-item>
+        <!-- baloons, equipamento de laboratório -->
+        <a-asset-item id="baloes" src="/chemistry_glassware/scene.gltf"></a-asset-item>
+        <a-entity gltf-model="#baloes" scale="0.15 0.15 0.15" rotation="0 125 0" position="-5 -4 2"></a-entity>
+        
+        <!-- bottle, químico verde e respetiva animação-->
+        <a-asset-item id="potion" src="/chemical_potion/scene.gltf">
+
+          <!-- Etiqueta 1- substãncia A -->
+        <!-- Container da etiqueta -->
+        <a-entity a-billboard rotation="16.721 -38.31 19.761" position="-6.705 -3.524 -1.108">
+          <!-- Retângulo -->
+          <a-plane width="0.6" height="0.2" color="white" rotation="0 180 0"></a-plane>
+          <!-- Texto -->
+          <a-entity rotation="0 180 0">
+              <a-text value="Substância A" color="black" align="center" position="0 0 0.01" width="1.5"></a-text>
+          </a-entity>
+        </a-asset-item>
         <a-entity gltf-model="#potion" scale="0.15 0.15 0.15" id="bottle"
-        animation="property: position; from: -8 -4 -2; to: -6 -.8 4; dur: 5000; loop:true;"
-        animation__rotate="property: rotation; from: 0 0 0; to: 45 100 50; dur: 5000; loop:true;"></a-entity> 
+        animation="property: position; from: -8 -4 -2; to: -6 -.8 4; dur: 5000; loop:true"
+        animation__rotate="property: rotation; from: 0 0 0; to: 45 100 50; dur: 5000; loop:true"> 
+        </a-entity>
+        </a-entity> 
+
+        <!-- cilindro a simular a substância que vai mudar de cor -->
+        <a-cylinder color="crimson" height="1.2" radius=".7" position="-5.692 -3.3 4.7"></a-cylinder>
+
+          <!-- Etiqueta 2-sudtãncia B -->
+          <!-- Container da etiqueta -->
+          <a-entity a-billboard rotation="0 -58.84 0" position="-5 -3.017 4.33">
+            <!-- Retângulo -->
+            <a-plane width="0.6" height="0.2" color="white" rotation="0 180 0"></a-plane>
+            <!-- Texto -->
+            <a-entity rotation="0 180 0">
+                <a-text value="Substância B" color="black" align="center" position="0 0 0.01" width="1.5
+                "></a-text>
+            </a-entity>
+          </a-entity>
+    
 
         <!--Bolhas-->
         <a-sphere id="sphere1" color="red" radius="0.20" animation="property: position; from: -5.692 -1 4.7; to: -5.692 1 4.7; 
