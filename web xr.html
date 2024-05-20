@@ -28,8 +28,18 @@
         <!-- bottle -->
         <a-asset-item id="potion" src="/chemical_potion/scene.gltf"></a-asset-item>
         <a-entity gltf-model="#potion" scale="0.15 0.15 0.15" id="bottle"
-        animation="property: position; from: -8 -4 -2; to: -6 -.8 4; dur: 5000; loop:true;"
-        animation__rotate="property: rotation; from: 0 0 0; to: 45 100 50; dur: 5000; loop:true;"></a-entity> 
+          animation="property: position; from: -8 -4 -2; to: -6 -.8 4; dur: 5000; loop:true;"
+          animation__rotate="property: rotation; from: 0 0 0; to: 45 100 50; dur: 5000; loop:true;">
+
+          <!-- Etiqueta 1- substãncia A -->
+          <!-- Container da etiqueta -->
+          <a-entity  a-billboard rotation="0 180 0" position="2.903 -8.941 4.604">
+            <a-plane width="0.6" height="0.2" color="white" rotation="0 180 0" scale="5 5 5" position="2.843 5.970 -0.007">
+              <a-text  value="Substância A" color="black" align="center" width="2" position="0.01 0.01 0.01"></a-text>
+            </a-plane>
+          </a-entity>
+          
+        </a-entity>
 
         <!--Bolhas-->
         <a-sphere id="sphere1" color="red" radius="0.20" animation="property: position; from: -5.692 -1 4.7; to: -5.692 1 4.7; 
@@ -53,6 +63,22 @@
         <a-sphere id="sphere7" color="red" radius="0.20" animation="property: position; from: -5.5 -1.2 4.7; to: -5.5 1.2 4.7; 
         dur: 2000; loop:true; delay:14000;" material="opacity: 0.5;"></a-sphere>
 
+     
+        
+
+        <!-- Etiqueta 2 -->
+        <a-entity position="-5.076 -3.023  4.2372" rotation="0 -54.64 0">
+          <!-- Container da etiqueta -->
+          <a-entity a-billboard position="0.011 0 -0.016">
+          <!-- Retângulo -->
+            <a-plane width="0.6" height="0.2" color="white" rotation="0 180 0"></a-plane>
+          <!-- Texto -->
+            <a-entity rotation="0 180 0">
+                <a-text value="Substância B" color="black" align="center" position="0 0 0.01" width="1.5
+                "></a-text>
+            </a-entity>
+          </a-entity>
+      </a-entity>
 
         <!-- Boneca -->
         <a-entity position="-2 1 11" rotation="0 172 0">
