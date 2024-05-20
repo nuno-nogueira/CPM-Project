@@ -16,20 +16,22 @@
         <img id="laboratory" src="science-lab-360.webp">
         <a-sky id="image-360" radius="50" src="#laboratory"></a-sky>
 
-        <!-- baloons -->
+        <!-- Copos -->
         <a-asset-item id="baloes" src="/chemistry_glassware/scene.gltf"></a-asset-item>
         <a-entity gltf-model="#baloes" scale="0.15 0.15 0.15" rotation="0 125 0" position="-5 -4 2"></a-entity>
-        
-        <a-cylinder color="crimson" height="1.2" radius=".7" position="-5.692 -3.3 4.7"></a-cylinder>
+        <!-- conteúdo líquido do copo -->
+        <a-cylinder id="liquid" color="orange" height="1.2" radius=".7" position="-5.692 -3.3 4.7"></a-cylinder>
 
-        <!-- START -->
-        <a-entity text="value: START; color: red" rotation="0 125 0" position="-5 1.5 -1.4" scale="8 8 8" start-animation-on-click></a-entity>
+        <!-- Texto -->
+        <!-- <a-entity text="value: Start; color: blue" rotation="0 125 0" position="-5 1.5 -1.4" scale="8 8 8" start-animation-on-click></a-entity> -->
         
         <!-- bottle -->
         <a-asset-item id="potion" src="/chemical_potion/scene.gltf"></a-asset-item>
         <a-entity gltf-model="#potion" scale="0.15 0.15 0.15" id="bottle"
-          animation="property: position; from: -8 -4 -2; to: -6 -.8 4; dur: 5000; loop:true;"
-          animation__rotate="property: rotation; from: 0 0 0; to: 45 100 50; dur: 5000; loop:true;">
+          animation="property: position; from: -8 -4 -2; to: -6 -.8 4; dur: 5000;"
+          animation__rotate="property: rotation; from: 0 0 0; to: 45 100 50; dur: 5000;"
+          animation__position="property: position; from: -6 -.8 4; to: -8 -4 -2; dur: 5000; delay: 8000;"
+          animation__rotation2="property: rotation; from: 45 100 50; to: 0 0 0; dur: 5000; delay: 8000;">
 
           <!-- Etiqueta 1- substãncia A -->
           <!-- Container da etiqueta -->
@@ -43,28 +45,25 @@
 
         <!--Bolhas-->
         <a-sphere id="sphere1" color="red" radius="0.20" animation="property: position; from: -5.692 -1 4.7; to: -5.692 1 4.7; 
-        dur: 2000; loop:true; delay:2000;" material="opacity: 0.5;"></a-sphere>
+        dur: 2000; loop:true; delay:7000;"></a-sphere>
 
         <a-sphere id="sphere2" color="red" radius="0.20" animation="property: position; from: -5.2 -1.2 4.7; to: -5.2 1.2 4.7; 
-        dur: 2000; loop:true; delay:4000;" material="opacity: 0.5;"></a-sphere>
+        dur: 2000; loop:true; delay:8000;"></a-sphere>
 
         <a-sphere id="sphere3" color="red" radius="0.20" animation="property: position; from: -5.3 -1.9 4.7; to: -5.3 1.9 4.7; 
-        dur: 2000; loop:true; delay:6000;" material="opacity: 0.5;"></a-sphere>
+        dur: 2000; loop:true; delay:8000;"></a-sphere>
 
         <a-sphere id="sphere4" color="red" radius="0.20" animation="property: position; from:-5.4 -1.5 4.7; to:-5.4 1.5 4.7; 
-        dur: 2000; loop:true; delay:8000;" material="opacity: 0.5;"></a-sphere>
+        dur: 2000; loop:true; delay:7000;"></a-sphere>
 
         <a-sphere id="sphere5" color="red" radius="0.20" animation="property: position; from: -5.3 -1.4 4.7; to: -5.3 1.4 4.7; 
-        dur: 2000; loop:true; delay:10000;" material="opacity: 0.5;"></a-sphere>
+        dur: 2000; loop:true; delay:9000;"></a-sphere>
 
         <a-sphere id="sphere6" color="red" radius="0.20" animation="property: position; from: -5.4 -1.3 4.7; to: -5.4 1.3 4.7; 
-        dur: 2000; loop:true; delay:12000;" material="opacity: 0.5;"></a-sphere>
+        dur: 2000; loop:true; delay:10000;"></a-sphere>
 
         <a-sphere id="sphere7" color="red" radius="0.20" animation="property: position; from: -5.5 -1.2 4.7; to: -5.5 1.2 4.7; 
-        dur: 2000; loop:true; delay:14000;" material="opacity: 0.5;"></a-sphere>
-
-     
-        
+        dur: 2000; loop:true; delay:9000;"></a-sphere>
 
         <!-- Etiqueta 2 -->
         <a-entity position="-5.076 -3.023  4.2372" rotation="0 -54.64 0">
@@ -81,7 +80,7 @@
       </a-entity>
 
         <!-- Boneca -->
-        <a-entity position="-2 1 11" rotation="0 172 0">
+        <a-entity position="-2 .2 11" rotation="0 172 0">
           <!-- Cabelo -->
           <a-box color="#965e36" width="3" depth="1.3" height="4" position="0 -.5 -1"></a-box>
           <a-box color="#965e36" width="2.5" depth="1.8" height="1.6" position="0 .45 0"></a-box>
@@ -98,8 +97,10 @@
           <!-- Olhos -->
           <a-sphere position="-.4 .1 1" radius=".3" color="white"></a-sphere>
           <a-sphere position=".4 .1 1" radius=".3" color="white"></a-sphere>
-          <a-sphere position="-.4 .1 1.12" radius=".2" color="black"></a-sphere>
-          <a-sphere position=".4 .1 1.12" radius=".2" color="black"></a-sphere>
+          <a-sphere position="-.4 .1 1.12" radius=".2" color="black"
+          animation="property: position; from: -.4 .1 1.12; to: -.35 .1 1.12; dur: 2000;"></a-sphere>
+          <a-sphere position=".4 .1 1.12" radius=".2" color="black"
+          animation="property: position; from: .4 .1 1.12; to: .45 .1 1.12; dur: 2000;"></a-sphere>
           <!-- Nariz -->
           <a-box color="#d9b675" width=".1" depth=".1" height=".1" position="0 -.1 1.3"></a-box>
           <!-- Lábios -->
@@ -111,7 +112,11 @@
           <a-cylinder position="0 -1 0" radius=".5" height="1" color="#fadea2"></a-cylinder>
           <!-- Top -->
           <a-box color="white" width="2" depth="1.6" height="2" position="0 -2.5 0"></a-box>
-          
+          <!-- Botões -->
+          <a-sphere position="0 -2 .8" radius=".1" color="black"></a-sphere>
+          <a-sphere position="0 -2.8 .8" radius=".1" color="black"></a-sphere>
+          <a-sphere position="0 -3.6 .9" radius=".1" color="black"></a-sphere>
+          <a-sphere position="0 -4.4 1.1" radius=".1" color="black"></a-sphere>
 
           <!-- Braços -->
           <a-cylinder position="1.3 -2.85 .1" radius=".3" height="2.3" color="white"></a-cylinder>
@@ -136,54 +141,14 @@
 
         </a-entity>
 
-       
-
-        <!-- box -->
-        <!-- <a-entity geometry="primitive: box" position="-8 -4 -2" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true"></a-entity>
-    </a-scene> -->
-    <!-- <a-scene>
-        <a-box 
-          animation__move1="
-            property: position;
-            from: 0 1 -3;
-            to: 4 1 -5;
-            dur: 3000;
-          "
-          animation__rotate="
-            property: rotation;
-            from: 0 0 0;
-            to: 0 360 0;
-            dur: 2000;
-            delay: 3000;
-          "
-          animation__move2="
-            property: position;
-            from: 4 1 -5;
-            to: -4 1 -7;
-            dur: 3000;
-            delay: 5000;
-          "
-          color="#4CC3D9">
-        </a-box>
-        
-      </a-scene> -->
     <script>
-      /*AFRAME.registerComponent('rotation-reader', {
-        /**
-         * We use IIFE (immediately-invoked function expression) to only allocate one
-         * vector or euler and not re-create on every tick to save memory.
-         
-        tick: (function () {
-          var position = new THREE.Vector3();
-          var quaternion = new THREE.Quaternion();
-
-          return function () {
-            this.el.object3D.getWorldPosition(position);
-            this.el.object3D.getWorldQuaternion(quaternion);
-            // position and rotation now contain vector and quaternion in world space.
-          };
-        })()
-      });*/
+      setTimeout( function() {
+        function changeColor(eleId, colorValue) {
+        const box = document.getElementById(eleId);
+        box.setAttribute('color', colorValue);
+      }
+      changeColor("liquid", 'red')
+      }, 7000)
     </script>
 </body>
 </html>
