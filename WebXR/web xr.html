@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>laboratório de química</title>
+    <!-- Biblioteca A-frame -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- Biblioteca AR.js para A-frame -->
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.3.1/aframe/build/aframe-ar-nft.js"></script>
     
 </head>
-<body style="margin: 0; overflow: hidden;">
+<body >
     <a-scene embedded arjs >
+      
       <a-marker preset="custom" type='pattern' url='./Marcador/pattern-marker.patt' >
-          <a-camera  position="0 -12 0"></a-camera>
-          <a-entity  rotation="-1.796 -120 -2.092" position="0 0 -35">
-            
+         
+          <a-entity  rotation="-1.796 105 -2.092" >
+            <a-camera position="-5 -4 15" ></a-camera>
           </a-entity>
 
             <!-- imagem 360° como cenário -->
@@ -144,18 +147,11 @@
               <a-box width=".45" depth=".2" height=".3" position=".6 -8.7 .6" color="#fadea2"></a-box>
               <a-box width=".45" depth=".2" height=".3" position="-.6 -8.7 .6" color="#fadea2"></a-box>
 
-          
-          
-          <!-- <a-marker-camera type='pattern' url='./Marcador/pattern-marker.patt'></a-marker-camera> -->
-        
-          
         </a-entity> 
       </a-marker>
         <a-entity camera></a-entity>
         <!-- mudança de cor(laranja => vermelha) pós reação química  -->
         <script src="./webxr.js"></script>
-    </a-scene>
-    
-    
+    </a-scene>   
 </body>
 </html>
